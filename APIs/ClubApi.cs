@@ -1,4 +1,5 @@
-﻿using System.Data.SqlClient;
+﻿using System.Data;
+using System.Data.SqlClient;
 using efm_c_.Models;
 
 namespace efm_c_.APIs
@@ -15,7 +16,10 @@ namespace efm_c_.APIs
         // CRUD operations for Club
         public Club CreateClub(Club club)
         {
-            _connection.Open();
+            if (_connection.State == ConnectionState.Closed)
+            {
+                _connection.Open();
+            }
             var commandText = "INSERT INTO club (nom, id_gerant, date_creation) VALUES (@Nom, @IdGerant, @DateCreation); SELECT SCOPE_IDENTITY();";
             using (var command = new SqlCommand(commandText, _connection))
             {

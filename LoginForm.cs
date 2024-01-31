@@ -1,4 +1,6 @@
-﻿using MaterialSkin2DotNet.Controls;
+﻿using efm_c_.APIs;
+using efm_c_.Models;
+using MaterialSkin2DotNet.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,15 +16,12 @@ namespace efm_c_
 {
     public partial class LoginForm : MaterialForm
     {
-        SqlConnection con;
-        SqlCommand cmd;
-        SqlDataReader dr;
-        public static string role;
+        UserApi userApi;
 
         public LoginForm()
         {
             InitializeComponent();
-            con = Program.GetConnexion();
+            userApi = new UserApi();
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -32,28 +31,16 @@ namespace efm_c_
                 return;
             }
 
-            if (con.State == ConnectionState.Closed)
-                con.Open();
-
-            String query = "select role from users where nom_utilisateur=@username and mot_de_passe=@password";
-            cmd = new SqlCommand(query, con);
-            cmd.Parameters.AddWithValue("@username", txtUsername.Text);
-            cmd.Parameters.AddWithValue("@password", txtPassword.Text);
-            dr = cmd.ExecuteReader();
-            if (dr.Read())
+            User user = userApi.GetUser(txtUsername.Text, txtPassword.Text);
+            if (user == null)
             {
-                role = dr["role"].ToString();
-
-                if (role.Equals("admin"))
+                MessageBox.Show("Mot de passe ou nom d'utilisateur incorrect !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }else if (user.Role.Equals("admin"))
                     new AdminForm().Show();
                 else
                     new GerantForm().Show();
                 Hide();
-            }
-            else
-            {
-                MessageBox.Show("Mot de passe ou nom d'utilisateur incorrect !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
     }
 }

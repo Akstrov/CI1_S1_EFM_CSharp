@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\THUNDEROBOT\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\THUNDEROBOT\\.nuget\\packages"
+      "C:\\Users\\yalam\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\yalam\\.nuget\\packages"
     ],
     "configProperties": {
       "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": true,

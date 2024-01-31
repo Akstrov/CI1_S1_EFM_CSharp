@@ -1,4 +1,5 @@
-﻿using System.Data.SqlClient;
+﻿using System.Data;
+using System.Data.SqlClient;
 using efm_c_.Models;
 
 namespace efm_c_.APIs
@@ -15,7 +16,10 @@ namespace efm_c_.APIs
         // CRUD operations for Evenement
         public Evenement CreateEvenement(Evenement evenement)
         {
-            _connection.Open();
+            if (_connection.State == ConnectionState.Closed)
+            {
+                _connection.Open();
+            }
             var commandText = "INSERT INTO evenement (titre, description, id_club, date_debut, date_fin, status, prix) VALUES (@Titre, @Description, @IdClub, @DateDebut, @DateFin, @Status, @Prix); SELECT SCOPE_IDENTITY();";
             using (var command = new SqlCommand(commandText, _connection))
             {

@@ -502,11 +502,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\CI1\\c#\\efm_c#\\efm_c#.csproj",
+      "projectUniqueName": "D:\\CI1\\c#\\CI1_S1_EFM_CSharp\\efm_c#.csproj",
       "projectName": "efm_c#",
-      "projectPath": "D:\\CI1\\c#\\efm_c#\\efm_c#.csproj",
+      "projectPath": "D:\\CI1\\c#\\CI1_S1_EFM_CSharp\\efm_c#.csproj",
       "packagesPath": "C:\\Users\\yalam\\.nuget\\packages\\",
-      "outputPath": "D:\\CI1\\c#\\efm_c#\\obj\\",
+      "outputPath": "D:\\CI1\\c#\\CI1_S1_EFM_CSharp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\yalam\\AppData\\Roaming\\NuGet\\NuGet.Config",

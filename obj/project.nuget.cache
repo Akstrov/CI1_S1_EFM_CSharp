@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YTGSZN6mmjSW4mKXVXSW9iJ9Ajy8QTV5zPO2ccIzhmfBSWBNCSbvRXlMI8SlVVstEYBQ6yyeoHcrMF/gncY1SA==",
+  "dgSpecHash": "hbb7bqTFWLfM7RZ95Isqx8dbmZDIdmCEAc9SWTqVsfVFXJ/O09zLm5nQQypCvgGMPBkN4NVD2yQ6QtM1ZhJbsw==",
   "success": true,
-  "projectFilePath": "D:\\CI1\\c#\\efm_c#\\efm_c#.csproj",
+  "projectFilePath": "D:\\CI1\\c#\\CI1_S1_EFM_CSharp\\efm_c#.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yalam\\.nuget\\packages\\materialskin2dotnet\\1.1.2\\materialskin2dotnet.1.1.2.nupkg.sha512",
     "C:\\Users\\yalam\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",

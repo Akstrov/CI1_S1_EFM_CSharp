@@ -14,6 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = efm_c_
-build_property.ProjectDir = D:\CI1\c#\efm_c#\
+build_property.ProjectDir = D:\CI1\c#\CI1_S1_EFM_CSharp\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
