@@ -206,5 +206,11 @@ namespace efm_c_
         {
 
         }
+
+        private void btnClubs_Click(object sender, EventArgs e)
+        {
+            new ClubsManagement().Show();
+            Hide();
+        }
     }
 }

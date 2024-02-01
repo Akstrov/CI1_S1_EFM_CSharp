@@ -20,11 +20,11 @@ namespace efm_c_.APIs
             {
                 _connection.Open();
             }
-            var commandText = "INSERT INTO club (nom, id_gerant, date_creation) VALUES (@Nom, @IdGerant, @DateCreation); SELECT SCOPE_IDENTITY();";
+            var commandText = "INSERT INTO club (nom, date_creation) VALUES (@Nom, @DateCreation); SELECT SCOPE_IDENTITY();";
             using (var command = new SqlCommand(commandText, _connection))
             {
                 command.Parameters.AddWithValue("@Nom", club.Nom);
-                command.Parameters.AddWithValue("@IdGerant", club.IdGerant);
+                //command.Parameters.AddWithValue("@IdGerant", club.IdGerant);
                 command.Parameters.AddWithValue("@DateCreation", club.DateCreation);
                 var newId = Convert.ToInt32(command.ExecuteScalar());
                 club.Id = newId;
@@ -62,10 +62,14 @@ namespace efm_c_.APIs
         {
             _connection.Open();
             var commandText = "UPDATE club SET nom = @Nom, id_gerant = @IdGerant, date_creation = @DateCreation WHERE id = @ClubId";
+            if (club.IdGerant == null)
+                commandText = "UPDATE club SET nom = @Nom, date_creation = @DateCreation WHERE id = @ClubId";
+            
             using (var command = new SqlCommand(commandText, _connection))
             {
                 command.Parameters.AddWithValue("@Nom", club.Nom);
-                command.Parameters.AddWithValue("@IdGerant", club.IdGerant);
+                if (club.IdGerant != null)
+                    command.Parameters.AddWithValue("@IdGerant", club.IdGerant);
                 command.Parameters.AddWithValue("@DateCreation", club.DateCreation);
                 command.Parameters.AddWithValue("@ClubId", club.Id);
                 command.ExecuteNonQuery();

@@ -191,6 +191,7 @@
             btnClubs.Type = MaterialSkin2DotNet.Controls.MaterialButton.MaterialButtonType.Contained;
             btnClubs.UseAccentColor = false;
             btnClubs.UseVisualStyleBackColor = true;
+            btnClubs.Click += btnClubs_Click;
             // 
             // gbClubs
             // 
@@ -882,7 +883,7 @@
             materialDivider10.TabIndex = 11;
             materialDivider10.Text = "materialDivider10";
             // 
-            // AdminForm
+            // Dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -890,7 +891,7 @@
             Controls.Add(gbEvents);
             Controls.Add(gbClubs);
             Controls.Add(panel1);
-            Name = "AdminForm";
+            Name = "Dashboard";
             PrimaryColor = MaterialSkin2DotNet.Primary.Teal600;
             PrimaryDarkColor = MaterialSkin2DotNet.Primary.Teal900;
             PrimaryLightColor = MaterialSkin2DotNet.Primary.Teal100;

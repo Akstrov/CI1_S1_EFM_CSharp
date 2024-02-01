@@ -24,3 +24,5 @@ C:\Users\THUNDEROBOT\source\repos\efm_c#\bin\Debug\net8.0-windows\runtimes\unix\
 C:\Users\THUNDEROBOT\source\repos\efm_c#\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\THUNDEROBOT\source\repos\efm_c#\obj\Debug\net8.0-windows\efm_c_.LoginForm.resources
 C:\Users\THUNDEROBOT\source\repos\efm_c#\obj\Debug\net8.0-windows\efm_c_.Dashboard.resources
+C:\Users\THUNDEROBOT\source\repos\efm_c#\obj\Debug\net8.0-windows\efm_c_.ClubsManagement.resources
+C:\Users\THUNDEROBOT\source\repos\efm_c#\obj\Debug\net8.0-windows\efm_c_.MembersManagement.resources
